@@ -1,0 +1,3 @@
+#!/bin/bash
+
+python ./train_net_frame.py --config-file ./configs/stow_configs/stow_bin_multiframe.yaml --num-gpus 1 --eval-only MODEL.WEIGHTS ./output/stow_bin_multiframe/model_final.pth OUTPUT_DIR ./output/stow_bin_multiframe INPUT.SAMPLING_FRAME_NUM 15 SOLVER.NUM_GPUS 1 MODEL.MASK_FORMER.TEST.INFERENCE_THRESHOLD 0.6 MODEL.WEIGHTS ./output/stow_bin_multiframe/model_final.pth TEST.DETECTIONS_PER_IMAGE 20 MODEL.REID.TEST_MATCH_THRESHOLD 0.2
